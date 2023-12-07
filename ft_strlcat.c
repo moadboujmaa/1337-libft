@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 13:21:05 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/06 16:26:18 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/07 13:03:17 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,30 @@
 size_t	ft_strlcat(char *restrict dst,
 			const char *restrict src, size_t size)
 {
-	size_t	dstsize;
+	size_t	dstlen;
+	size_t	srclen;
 	size_t	i;
 
 	i = 0;
-	dstsize = ft_strlen(dst);
-	while (src[dstsize] && dstsize <= size - 1)
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (!src)
+		return (dstlen);
+	while (src[i] && i < size - dstlen - 1)
 	{
-		dst[dstsize] = src[i];
+		dst[dstlen + i] = src[i];
 		i++;
 	}
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
 }
 
-int	main(void)
-{
-	char	dst[20] = "moad BOUJAMAA";
+// int	main(void)
+// {
+// 	char	dst[20] = "moad BOUJAMAA ";
 
-	printf("%lu\n", strlcat(dst, "moad boujamaa", sizeof(dst)));
-	return (0);
-}
+// 	printf("%lu\n", ft_strlcat(dst, "moad boujamaa", sizeof(dst)));
+// 	// printf("%lu\n", strlcat(dst, "moad boujamaa", sizeof(dst)));
+// 	printf("%s", dst);
+// 	return (0);
+// }

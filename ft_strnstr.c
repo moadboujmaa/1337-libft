@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 11:31:21 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:16 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/07 13:08:00 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/07 14:36:05 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*f;
+	size_t	i;
+	size_t	j;
 
-	f = (unsigned char *) b;
 	i = 0;
-	while (i < len)
+	if (!s2)
+		return ((char *) s1);
+	while (s1[i] && i < n)
 	{
-		f[i] = (unsigned char) c;
+		j = 0;
+		while (s1[i] && s2[j + i] && i + j < n)
+			j++;
+		if (s2[i] == '\0')
+			return ((char *) s2 + i);
 		i++;
 	}
-	write(1, f, 10);
-	return (b);
+	return (NULL);
 }
-// int main() {
-//     char b[10] = "redouane";
-//     printf("%s", ft_memset(b, 'j', 3));
-//     return 0;
-// }
+
+int	main(void)
+{
+	char s1[] = "moad boujamaa";
+	char s2[] = "bo";
+
+	printf("|%s|", ft_strnstr(s1, s2, 6));
+	return (0);
+}

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 11:31:21 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:16 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/07 15:58:32 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/07 16:14:57 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-	unsigned char	*f;
+	unsigned char	*ptr;
 
-	f = (unsigned char *) b;
+	ptr = (unsigned char *) s;
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
-		f[i] = (unsigned char) c;
+		ptr[i] = 0;
 		i++;
 	}
-	write(1, f, 10);
-	return (b);
+	write(1, ptr, 5);
 }
+
 // int main() {
-//     char b[10] = "redouane";
-//     printf("%s", ft_memset(b, 'j', 3));
+//     char b[5] = "redou";
+//     ft_bzero(b, 3);
 //     return 0;
 // }

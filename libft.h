@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:25:35 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/06 16:33:32 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/07 16:00:39 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ int		ft_atoi(const char *str);
 size_t	ft_strlcpy(char *restrict dst, 
 			const char *restrict src, size_t dstsize);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 #endif
