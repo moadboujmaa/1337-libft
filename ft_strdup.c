@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 17:34:17 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/09 15:05:17 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/09 15:09:37 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/09 15:34:14 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 'a' && c <= 'z')
+	size_t	i;
+	char	*ptr;
+
+	ptr = (char *) malloc(ft_strlen(s1));
+	if (!ptr)
+		return (0);
+	i = 0;
+	while (s1[i])
 	{
-		return (c - 32);
+		ptr[i] = s1[i];
+		i++;
 	}
-	return (c);
+	ptr[i] = '\0';
+	return (ptr);
 }

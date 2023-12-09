@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:29:50 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/06 12:20:27 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:04:17 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_atoi("--1245"));
-// 	return (0);
-// }

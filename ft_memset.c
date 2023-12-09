@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:31:21 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/07 15:57:16 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:04:46 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,13 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*f;
 
 	f = (unsigned char *) b;
+	if (!b)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{
 		f[i] = (unsigned char) c;
 		i++;
 	}
-	write(1, f, 10);
 	return (b);
 }
-// int main() {
-//     char b[10] = "redouane";
-//     printf("%s", ft_memset(b, 'j', 3));
-//     return 0;
-// }

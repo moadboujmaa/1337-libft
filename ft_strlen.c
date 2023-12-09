@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 09:55:32 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/06 09:21:50 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:03:18 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	i = 0;
 	while (*s++)
-	{
 		i++;
-	}
 	return (i);
 }

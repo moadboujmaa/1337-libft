@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:58:32 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/07 16:14:57 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:04:13 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	ft_bzero(void *s, size_t n)
 	}
 	write(1, ptr, 5);
 }
-
-// int main() {
-//     char b[5] = "redou";
-//     ft_bzero(b, 3);
-//     return 0;
-// }

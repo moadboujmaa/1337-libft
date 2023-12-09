@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:26:54 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/07 10:14:41 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:05:03 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%d", ft_strncmp("\200", "\0", 5));
-// 	return (0);
-// }
