@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:48:07 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/09 15:05:11 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:27:43 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ char	*ft_strrchr(const char *s, int c)
 		len--;
 	if (s[len] != c && len == 0)
 		return (NULL);
-	return ((char *)s + len); 
+	return ((char *)s + len);
 }
