@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 09:14:26 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/10 09:43:01 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/11 11:55:23 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*ptr;
 
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	ptr = (char *) malloc(sizeof(char) * len + 1);
 	if (!ptr)
 		return (0);
@@ -32,8 +36,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 // int main() {
-//     char s[20] = "moad boujamaa";
-//     char *return_val = ft_substr(s, 1, 4);
+//     char *s = "moad";
+//     char *return_val = ft_substr(s, 20, 20);
 //     printf("returned value: |%s|", return_val);
 
 //     return 0;

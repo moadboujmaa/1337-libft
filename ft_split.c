@@ -1,44 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 13:08:00 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/11 11:29:08 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/11 16:43:48 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+int	count_words(char *s, char sep)
 {
-	size_t	i;
-	size_t	j;
+	int	count;
+	int	i;
 
+	count = 0;
 	i = 0;
-	if (!*s2)
-		return ((char *) s1);
-	while (s1[i] && i < n)
+	if (s[i] != sep)
 	{
-		j = 0;
-		while (s1[i + j] == s2[j] && i + j < n)
-		{
-			j++;
-			if (s2[j] == '\0')
-				return ((char *)s1 + i);
-		}
+		count++;
+	}
+	while (s[i])
+	{
+		if (s[i] != sep && s[i - 1] == sep )
+			count++;
 		i++;
 	}
-	return (NULL);
+	return (count);
 }
 
-// int	main()
-// {
-// 	char s1[15] = "moad boujamaa";
-// 	char s2[2] = "oa";
+char	**ft_split(char const *s, char c)
+{
+	int		c_sep;
+	char	*ptr;
 
-// 	ft_strnstr(s1, s2, 13);
+	c_sep = count_sep(s, c);
+
+}
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	sep;
+
+// 	s = "dljjldf moad bouj maa  ehfoehroh  ";
+// 	sep = ' ';
+// 	printf("%d", count_words(s, sep));
 // 	return (0);
 // }

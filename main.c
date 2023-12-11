@@ -6,14 +6,14 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:22:06 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/09 16:23:31 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/11 10:24:22 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
-{
-	printf("moad");
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("moad");
+// 	return (0);
+// }

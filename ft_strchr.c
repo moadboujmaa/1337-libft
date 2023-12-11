@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:46:16 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/06 09:45:54 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/11 11:00:36 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != (char)c)
 		s++;
-	if (*s == '\0' && c != '\0')
+	if (*s == '\0' && (char)c != '\0')
 		return (NULL);
 	return ((char *)s);
 }
