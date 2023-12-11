@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 12:10:06 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/10 14:39:07 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/10 22:31:19 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = (char *) malloc((ft_strlen(s1) - count_set + 1) * sizeof(char));
 	if (!ptr)
 		return (0);
-	while (i < ft_strlen(s1) - count_set + 1)
+	while (i < ft_strlen(s1) - count_set)
 	{
 		ptr[i] = s1[first_trim_index];
 		i++;
@@ -79,9 +79,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	*s1;
-
-// 	s1 = "zzzzmoad boujamaazzzzzz";
-// 	printf("%s", ft_strtrim(s1, "mza"));
+// 	char	s1[] = "lorem ipsum dolor sit amet";
+// 	printf("%s", ft_strtrim(s1, "tel"));
 // 	return (0);
 // }
