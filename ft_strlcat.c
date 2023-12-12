@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 13:21:05 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/10 20:41:26 by mboujamaa        ###   ########.fr       */
+/*   Updated: 2023/12/12 13:22:32 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 // int main() {
-//     char s1[10] = "a";
-//     char s2[] = "lorem ipsum dolor sit amet";
-//     printf("%ld", ft_strlcat(s1, s2, 1));
+//     char s1[5] = "gh";
+//     char *s2 = "lorem ipsum dolor sit amet";
+//     printf("%ld", ft_strlcat(s1, s2, 5));
+// 	printf("%s", s1);
 //     return 0;
 // }

@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:06:48 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/12 16:32:43 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/12 13:24:02 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/12 15:15:41 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	count;
+	t_list	*tmp;
 
-	count = 0;
-	while (lst)
+	if (!*lst)
+		return ;
+	while (*lst)
 	{
-		count++;
-		lst = lst->next;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, *del);
+		free(*lst);
+		*lst = tmp;
 	}
-	return (count);
 }
+
+// int	main(void)
+// {
+// 	t_list	*node1;
+// 	t_list	*node2;
+
+// 	node2 = malloc(sizeof(t_list));
+// 	node1 = ft_lstnew("moad");
+// 	node2->content = ft_strdup("moad");
+// 	node2->next = node1;
+// 	printf("%s", node2->next->content);
+// }
