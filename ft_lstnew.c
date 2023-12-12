@@ -1,55 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/12 10:03:59 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/12 09:13:29 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/12 09:52:05 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *s, char sep)
+t_list	*ft_lstnew(void *content)
 {
-	int	count;
-	int	i;
+	t_list	*ptr;
 
-	count = 0;
-	i = 0;
-	if (s[i] != sep)
-	{
-		count++;
-	}
-	while (s[i])
-	{
-		if (s[i] != sep && s[i - 1] == sep)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		c_sep;
-	char	*ptr;
-
-	c_sep = count_sep(s, c);
-	ptr = (char **) malloc(sizeof(char *) * count_sep(s, c));
+	ptr = (t_list *)malloc(sizeof(t_list));
 	if (!ptr)
 		return (0);
+	ptr->content = content;
+	ptr->next = 0;
+	return (ptr); 
 }
 
 // int	main(void)
 // {
-// 	char	*s;
-// 	char	sep;
+// 	char 	*content;
+// 	t_list	*newlst;
 
-// 	s = "dljjldf moad bouj maa  ehfoehroh  ";
-// 	sep = ' ';
-// 	printf("%d", count_words(s, sep));
+// 	content = "moad";
+// 	newlst = ft_lstnew(content);
+// 	printf("%s", newlst->content);
 // 	return (0);
 // }
