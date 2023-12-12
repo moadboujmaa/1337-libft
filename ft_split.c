@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/11 16:43:48 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:49:58 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ char	**ft_split(char const *s, char c)
 	char	*ptr;
 
 	c_sep = count_sep(s, c);
-
+	ptr = (char **) malloc(sizeof(char *) * count_sep(s, c));
+	if (!ptr)
+		return (NULL);
 }
 
 // int	main(void)
