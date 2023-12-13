@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 06:54:00 by mboujamaa         #+#    #+#             */
-/*   Updated: 2023/12/13 06:56:17 by mboujamaa        ###   ########.fr       */
+/*   Updated: 2023/12/13 09:22:32 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-
+    
 }

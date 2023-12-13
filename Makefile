@@ -16,7 +16,7 @@ $(NAME) : $(OBJ)
 bonus: $(OBJ) $(BOBJ)
 	ar rc $(NAME) $(BOBJ)
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
