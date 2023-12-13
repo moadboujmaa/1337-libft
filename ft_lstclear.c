@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:24:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/12 15:15:41 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/13 06:32:33 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		tmp = (*lst)->next;
-		ft_lstdelone(*lst, *del);
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
 }
