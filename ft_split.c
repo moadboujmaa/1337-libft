@@ -6,13 +6,13 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:23:00 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/13 16:48:00 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *s, char sep)
+int	count_words(const char *s, char sep)
 {
 	int	count;
 	int	i;
@@ -32,24 +32,52 @@ int	count_words(char *s, char sep)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char	*add_word(int length)
 {
-	int		c_sep;
 	char	*ptr;
+	int		i;
 
-	c_sep = count_sep(s, c);
-	ptr = (char **) malloc(sizeof(char *) * count_sep(s, c));
+	ptr = (char *) malloc((ft_strlen(word) + 1) * sizeof(char));
 	if (!ptr)
-		return (0);
+		return (NULL);
+	return (ptr);
 }
 
-// int	main(void)
-// {
-// 	char	*s;
-// 	char	sep;
+char	**ft_split(char const *s, char c)
+{
+	char	**ptr;
+	int		word_index;
+	int		i;
+	int		j;
+	char	*word;
 
-// 	s = "dljjldf moad bouj maa  ehfoehroh  ";
-// 	sep = ' ';
-// 	printf("%d", count_words(s, sep));
-// 	return (0);
-// }
+	ptr = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!ptr)
+		return (0);
+	i = 0;
+	word_index = 0;
+	word = NULL;
+	while (s[i])
+	{
+		while (s[i] == c)
+			continue ;
+		while (s[j] != c)
+			j++;
+		word = add_word(j);
+	}
+	return (ptr);
+}
+
+int	main(void)
+{
+	char	*s;
+	char	sep;
+	int		i;
+
+	s = "dljjldf moad bouj maa  ehfoehroh  ";
+	sep = ' ';
+	i = 0;
+	while (s[i])
+		printf("%c", s[i++]);
+	return (0);
+}
