@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 16:48:00 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/14 12:56:46 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,65 +19,88 @@ int	count_words(const char *s, char sep)
 
 	count = 0;
 	i = 0;
-	if (s[i] != sep)
-	{
-		count++;
-	}
 	while (s[i])
 	{
-		if (s[i] != sep && s[i - 1] == sep)
+		if (s[i] == sep)
+			i++;
+		else
+		{
 			count++;
-		i++;
+			while (s[i] && s[i] != sep)
+				i++;
+		}
 	}
 	return (count);
 }
 
-char	*add_word(int length)
+static char	**free_lst(char **lst)
 {
-	char	*ptr;
-	int		i;
+	int	i;
 
-	ptr = (char *) malloc((ft_strlen(word) + 1) * sizeof(char));
-	if (!ptr)
-		return (NULL);
-	return (ptr);
+	i = 0;
+	while (lst[i])
+	{
+		free(lst[i]);
+		i++;
+	}
+	free(lst);
+	return (NULL);
+}
+
+size_t	next_sep(const char *s1, char sep)
+{
+	size_t	len;
+
+	len = 0;
+	while (*s1 && *s1 != sep)
+	{
+		len++;
+		s1++;
+	}
+	return (len);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	int		word_index;
-	int		i;
-	int		j;
-	char	*word;
+	char	**lst;
+	size_t	len_word;
+	int		lst_index;
 
-	ptr = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!ptr)
-		return (0);
-	i = 0;
-	word_index = 0;
-	word = NULL;
-	while (s[i])
+	lst = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!lst)
+		return (NULL);
+	lst_index = 0;
+	while (*s)
 	{
-		while (s[i] == c)
-			continue ;
-		while (s[j] != c)
-			j++;
-		word = add_word(j);
+		if (*s == c)
+			s++;
+		else
+		{
+			len_word = next_sep(s, c);
+			lst[lst_index] = ft_substr(s, 0, len_word);
+			if (!lst[lst_index])
+				return (free_lst(lst));
+			lst_index++;
+			s += len_word;
+		}
 	}
-	return (ptr);
+	lst[lst_index] = NULL;
+	return (lst);
 }
 
-int	main(void)
-{
-	char	*s;
-	char	sep;
-	int		i;
+// int	main(void)
+// {
+// 	char	**lst;
+// 	char	*s;
+// 	int		i;
 
-	s = "dljjldf moad bouj maa  ehfoehroh  ";
-	sep = ' ';
-	i = 0;
-	while (s[i])
-		printf("%c", s[i++]);
-	return (0);
-}
+// 	i = 0;
+// 	s = "hello! kjjkdls";
+// 	lst = ft_split(s, ' ');
+// 	while (lst[i])
+// 	{
+// 		printf("%s\n", lst[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

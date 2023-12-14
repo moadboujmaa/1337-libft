@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 06:54:00 by mboujamaa         #+#    #+#             */
-/*   Updated: 2023/12/13 11:03:18 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/14 14:37:59 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(ptr);
 		if (!new_node)
 		{
-			del(new_node);
+			del(ptr);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&head, new_node);
