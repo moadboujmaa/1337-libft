@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:28:12 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:20 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/13 06:39:49 by mboujamaa         #+#    #+#             */
+/*   Updated: 2023/12/16 12:06:16 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (*lst == NULL)
-		*lst = new;
-	else
-		ft_lstlast(*lst)->next = new;
+	if (!lst || !f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
-// int main()
-// {
-// 	t_list  *newnode = NULL;
-// 	ft_lstadd_back(&newnode, ft_lstnew(ft_strdup("hello")));
-// 	while (newnode != NULL)
-// 	{
-// 		printf("%s\n",newnode->content);
-// 		newnode = newnode->next;
-// 	}
-// }

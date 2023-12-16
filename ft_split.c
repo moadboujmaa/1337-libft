@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/14 12:56:46 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 13:14:06 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,8 @@ char	**ft_split(char const *s, char c)
 		{
 			len_word = next_sep(s, c);
 			lst[lst_index] = ft_substr(s, 0, len_word);
-			if (!lst[lst_index])
+			if (!lst[lst_index++])
 				return (free_lst(lst));
-			lst_index++;
 			s += len_word;
 		}
 	}
@@ -95,7 +94,7 @@ char	**ft_split(char const *s, char c)
 // 	int		i;
 
 // 	i = 0;
-// 	s = "hello! kjjkdls";
+// 	s = "hello! kjjkdls rgrt grtgrt gg g gt gt gt gt ";
 // 	lst = ft_split(s, ' ');
 // 	while (lst[i])
 // 	{

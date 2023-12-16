@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:05:41 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:19 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 15:55:44 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,3 +63,8 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(12345));
+// }

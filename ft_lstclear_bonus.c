@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 09:13:29 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:34 by mboujama         ###   ########.fr       */
+/*   Created: 2023/12/12 13:24:02 by mboujama          #+#    #+#             */
+/*   Updated: 2023/12/16 12:06:14 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*ptr;
+	t_list	*tmp;
 
-	ptr = (t_list *)malloc(sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
+	lst = NULL;
 }
 
 // int	main(void)
 // {
-// 	char 	*content;
-// 	t_list	*newlst;
+// 	t_list	*node1;
+// 	t_list	*node2;
 
-// 	content = "moad";
-// 	newlst = ft_lstnew(content);
-// 	printf("%s", newlst->content);
-// 	return (0);
+// 	node2 = malloc(sizeof(t_list));
+// 	node1 = ft_lstnew("moad");
+// 	node2->content = ft_strdup("moad");
+// 	node2->next = node1;
+// 	printf("%s", node2->next->content);
 // }

@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 09:12:12 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:45 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 16:37:01 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,13 @@ void	*ft_memcpy(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
+
+// int	main(void)
+// {
+// 	char	s1[20] = "moad boujamaa";
+// 	char	s2[20] = "moad boujamaa";
+
+// 	printf("%s\n", ft_memcpy(&s1[0], &s1[5], 2));
+// 	printf("%s", memcpy(&s2[0], &s2[5], 2));
+// 	return (0);
+// }

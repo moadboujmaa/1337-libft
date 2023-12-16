@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 11:43:42 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:42 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 16:04:15 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	char	*s = "moad boujamaa";
+
+// 	printf("%s", ft_memchr(s, 'b', 4));
+// }
