@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 12:53:59 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:23:07 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/17 09:53:29 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (ft_strlen(src));
 	i = 0;
-	while (src[i] && i < dstsize - 1 && dstsize != 0)
+	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
@@ -27,3 +27,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
+
+// int	main(void)
+// {
+// 	char	s1[6] = "moad";
+// 	char	s2[10] = "boujamaa";
+
+// 	printf("%zu\n", ft_strlcpy(s1, s2, 6));
+// 	printf("%s", s1);
+// 	return (0);
+// }

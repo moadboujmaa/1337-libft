@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 13:24:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/16 12:06:14 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/17 14:10:45 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
+	if (!lst || !del || !(*lst))
+		return ;
+	tmp = NULL;
 	while (*lst)
 	{
 		tmp = (*lst)->next;

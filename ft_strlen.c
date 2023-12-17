@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 09:55:32 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:23:09 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/17 09:55:28 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,11 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+// int	main(void)
+// {
+// 	char	*s = "1337|24";
+
+// 	printf("%zu", ft_strlen(s));
+// 	return (0);
+// }

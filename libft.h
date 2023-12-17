@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:25:35 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/16 13:11:47 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/17 11:40:31 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include <limits.h>
 
 // Mandtory - Part One
 int		ft_isalpha(int c);
