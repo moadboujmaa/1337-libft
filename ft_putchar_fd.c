@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 10:42:45 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/13 09:22:51 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 20:42:11 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ void	ft_putchar_fd(char s, int fd)
 {
 	write(fd, &s, 1);
 }
+
+// int	main(void)
+// {
+// 	ft_putchar_fd('h', 1);
+// 	return (0);
+// }

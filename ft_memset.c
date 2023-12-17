@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 11:31:21 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/16 16:48:05 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:56:54 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	int		len;
 
 // 	len = 5;
-// 	printf("%s\n", ft_memset(str, 66, len));
-// 	printf("%s", memset(str, 66, len));
+// 	printf("%s\n", (char *)ft_memset(str, 66, len));
+// 	printf("%s", (char *)memset(str2, 66, len));
 // }

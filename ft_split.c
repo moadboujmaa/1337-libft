@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:29:02 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/16 13:14:06 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/16 21:16:19 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ char	**ft_split(char const *s, char c)
 	size_t	len_word;
 	int		lst_index;
 
+	if (!s)
+		return (NULL);
 	lst = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!lst)
 		return (NULL);
@@ -94,8 +96,10 @@ char	**ft_split(char const *s, char c)
 // 	int		i;
 
 // 	i = 0;
-// 	s = "hello! kjjkdls rgrt grtgrt gg g gt gt gt gt ";
+// 	s = "test split function - moad boujamaa";
 // 	lst = ft_split(s, ' ');
+// 	if (lst)
+// 		printf("%s\n", lst[i]);
 // 	while (lst[i])
 // 	{
 // 		printf("%s\n", lst[i]);
