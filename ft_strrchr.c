@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:48:07 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/17 12:20:28 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/18 06:41:48 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char	*ft_strrchr(const char *s, int c)
 
 // int	main(void)
 // {
-// 	char	*s = "moad boujamaa";
-// 	printf("%s", ft_strrchr(s, 'm'));
+// 	char	*s = "zmoad boujamaa";
+// 	printf("mine: %s\n", ft_strrchr(s, 'z'));
+// 	printf("%s", strrchr(s, 'z'));
 // 	return (0);
 // }

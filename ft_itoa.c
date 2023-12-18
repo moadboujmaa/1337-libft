@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mboujamaa <mboujamaa@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:05:41 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/16 15:55:44 by mboujama         ###   ########.fr       */
+/*   Updated: 2023/12/17 22:05:19 by mboujamaa        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_itoa(int n)
 	length = number_length(n);
 	ptr = (char *) malloc(sizeof(char) * length + 1);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	if (n < 0)
 		ptr[0] = '-';
 	n = ft_abs(n);
