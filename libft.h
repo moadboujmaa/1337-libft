@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:25:35 by mboujama          #+#    #+#             */
-/*   Updated: 2023/12/17 11:40:31 by mboujama         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:28:40 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <fcntl.h>
 
-// Mandtory - Part One
+// Libft Functions
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -42,8 +44,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
-
-// Mandtory - Part Two
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar_fd(char s, int fd);
@@ -55,8 +55,6 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
-
-// Bonus part
 typedef struct s_list
 {
 	void			*content;
@@ -71,5 +69,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// printf functions
+int		ft_printf(const char *str, ...);
+void	ft_putchar(char s, int *len);
+void	ft_putnbr(long n, int *len);
+void	ft_putstr(char *s, int *len);
+void	ft_puthexa(unsigned long nb, char c, int *len);
+void	ft_putpointer(unsigned long nb, int *len);
 
 #endif
