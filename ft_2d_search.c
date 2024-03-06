@@ -1,44 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_2d_search.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 15:09:37 by mboujama          #+#    #+#             */
-/*   Updated: 2024/02/29 12:54:04 by mboujama         ###   ########.fr       */
+/*   Created: 2023/03/02 19:41:50 by mboujama          #+#    #+#             */
+/*   Updated: 2024/03/02 19:57:12 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_2d_search(char **arr, char *str)
 {
-	size_t	i;
-	char	*ptr;
+	int	i = 0;
 
-	ptr = (char *) malloc(ft_strlen(s1) + 1);
-	if (!ptr)
-		return (0);
-	i = 0;
-	while (s1[i])
+	while (arr[i])
 	{
-		ptr[i] = s1[i];
+		if (ft_strnstr(arr[i], str, 5))
+			return (arr[i]);
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return (NULL);
 }
 
-// int	main(void)
-// {
-// 	char	*str = NULL;
-// 	char	*ptr;
-// 	char	*ptr2;
-
-// 	ptr = ft_strdup(str);
-// 	ptr2 = strdup(str);
-// 	printf("%s\n", ptr);
-// 	printf("%s\n", ptr2);
-// 	return (0);
-// }

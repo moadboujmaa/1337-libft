@@ -6,7 +6,7 @@
 /*   By: mboujama <mboujama@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 17:25:35 by mboujama          #+#    #+#             */
-/*   Updated: 2024/02/29 12:28:40 by mboujama         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:46:45 by mboujama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 void	ft_putchar_fd(char s, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -77,5 +77,7 @@ void	ft_putnbr(long n, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_puthexa(unsigned long nb, char c, int *len);
 void	ft_putpointer(unsigned long nb, int *len);
+
+// Get next line functions
 
 #endif
